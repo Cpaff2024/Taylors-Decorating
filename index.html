@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting & Decorating Company</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Images/Logo/TAYLORSER_resized_logo.jpg" alt="Logo" class="logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+<nav id="mobile-menu">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+    </header>
+    
+    <main>
+        <!-- Section Content -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to Taylor's Decorating</h1>
+                <p>Professional Painting & Decorating in Essex</p>
+                <a href="#services" class="button">Our Services</a>
+            </div>
+        </section>
+        
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>With over 30 years of experience, we provide expert painting and decorating services across Essex and Hertfordshire. 
+                    Known for exceptional craftsmanship and attention to detail, we bring your vision to life, creating beautiful and lasting finishes for your home or business.
+                </p>
+            </div>
+        </section>
+        
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <img src="Images/Services/hallwayPaint2.jpeg" alt="Interior Painting">
+                    <h3>Interior Painting</h3>
+                    <p>Expertly painted interiors for a fresh, elegant look.</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Services/outSide1.jpeg" alt="Exterior Painting">
+                    <h3>Exterior Painting</h3>
+                    <p>Durable, weather-resistant exterior painting solutions.</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Services/Wallpaper3.JPG" alt="Wallpaper Installation">
+                    <h3>Wallpaper Installation</h3>
+                    <p>Precision wallpaper installation for beautiful walls.</p>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Services/Specialist WallPaper 1.jpeg" alt="Custom Finishes">
+                    <h3>Custom Finishes</h3>
+                    <p>Tailored finishes to suit your unique style.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="gallery" class="gallery">
+            <h2></h2>
+            <div class="carousel">
+                <div class="carousel-track">
+                <!-- Replace the src attributes with the correct file paths for your images -->
+                <img src="Images/Services/hallwayPaint2.jpeg" alt="Hallway">
+                <img src="Images/Services/wallPaint.jpeg" alt="Modern kitchen">
+                <img src="Images/Services/wallPaper2.jpeg" alt="Painted bedroom">
+                <img src="Images/Services/Wallpaper3.JPG" alt="Exterior house painting">
+                <img src="Images/Services/Specialist WallPaper 1.jpeg" alt="Hallway">
+                <img src="Images/Services/outSide1.jpeg" alt="Modern kitchen">
+                <img src="Images/Services/WallPaper1.jpeg" alt="Painted bedroom">
+                
+                <img src="Images/Services/hallwayPaint2.jpeg" alt="Hallway">
+                <img src="Images/Services/wallPaint.jpeg" alt="Modern kitchen">
+                <img src="Images/Services/wallPaper2.jpeg" alt="Painted bedroom">
+                <img src="Images/Services/Wallpaper3.JPG" alt="Exterior house painting">
+                <img src="Images/Services/Specialist WallPaper 1.jpeg" alt="Hallway">
+                <img src="Images/Services/outSide1.jpeg" alt="Modern kitchen">
+                <img src="Images/Services/WallPaper1.jpeg" alt="Painted bedroom">
+                
+                </div>
+            </div>
+ 
+</section>
+        </section>
+                
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for a free quote!</p>
+            <p>Phone: 07528069938</p>
+            <p>Email: garytaylor3@hotmail.co.uk</p>
+            <p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Taylorspaintinganddecorating" target="_blank" title="Visit our Facebook Page">
+                        <img src="Images/Icons/Facebook_Logo_Secondary.png" alt="Facebook Logo" class="social-icon">
+                    </a>
+                </div>
+                
+            </p>
+        </section>
+
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-2e962c5a-7b35-4972-843b-eaf532ab32b9" data-elfsight-app-lazy></div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Taylors Decorating</p>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+        // Stop the animation when hovering over the carousel
+        const carouselTrack = document.querySelector('.carousel-track');
+        carouselTrack.addEventListener('mouseover', () => {
+            carouselTrack.style.animationPlayState = 'paused';
+        });
+        carouselTrack.addEventListener('mouseout', () => {
+            carouselTrack.style.animationPlayState = 'running';
+        });
+    
+        // Modal functionality
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.querySelector(".close");
+    
+        // Open modal when clicking on an image
+        document.querySelectorAll('.carousel img').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+            });
+        });
+    
+        // Close modal
+        closeBtn.onclick = () => {
+            modal.style.display = "none";
+        };
+    </script>
+    
+
+</body>
+</html>
