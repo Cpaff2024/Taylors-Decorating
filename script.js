@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenu.style.display === "flex") {
+        mobileMenu.style.display = "none";
+    } else {
+        mobileMenu.style.display = "flex";
+    }
 }
